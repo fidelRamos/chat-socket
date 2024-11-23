@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat Sockets</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="login-container" class="login-container">
+      <form id="login-form" class="login-form">
+        <h3>CHAT SOCKETS</h3>
+        <br />
+        <input type="text" id="username-input" placeholder="Nombre" />
+        <input type="password" id="password-input" placeholder="Contraseña" />
+        <button type="submit">Unirse al chat</button>
+        <div style="margin-bottom: 10px"></div>
+        <!-- Espacio entre botones -->
+        <button type="button" id="cambiarContraseñabtn">
+          Cambiar contraseña
+        </button>
+        <!-- Nuevo botón -->
+      </form>
+    </div>
+
+    <div id="change-container" class="change-container" style="display: none">
+      <form id="change-form" class="change-form">
+        <h3>Cambio de clave de acceso</h3>
+        <br />
+        <input type="text" id="claveActual-input" placeholder="Clave actual" />
+        <input type="text" id="claveNueva-input" placeholder="Clave nueva" />
+        <button type="submit">Cambiar</button>
+        <div style="margin-bottom: 10px"></div>
+        <!-- Espacio entre botones -->
+        <button type="button" id="cancelarbtn">Regresar</button>
+        <!-- Nuevo botón -->
+      </form>
+    </div>
+
+    <section id="chat-container" class="msger" style="display: none">
+      <header class="msger-header">
+        <div class="msger-header-title">
+          <i class="fas fa-comment-alt"></i> Chat Sockets
+        </div>
+        <div class="msger-header-options">
+          <span><i class="fas fa-cog"></i></span>
+        </div>
+      </header>
+
+      <main class="msger-chat">
+        <!-- Aquí se insertarán los mensajes -->
+      </main>
+
+      <form class="msger-inputarea">
+        <input
+          type="text"
+          class="msger-input"
+          placeholder="Escribe un mensaje"
+        />
+        <button type="submit" class="msger-send-btn">Enviar</button>
+      </form>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
